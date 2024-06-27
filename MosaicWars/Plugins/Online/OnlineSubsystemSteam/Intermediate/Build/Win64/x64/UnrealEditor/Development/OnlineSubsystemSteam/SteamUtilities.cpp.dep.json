@@ -1,0 +1,25 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\source\\private\\steamutilities.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\intermediate\\build\\win64\\x64\\mosaicwarseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\onlinesubsystemsteam\\definitions.onlinesubsystemsteam.h",
+            "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\source\\private\\steamutilities.h",
+            "c:\\ue_5.4\\engine\\source\\thirdparty\\steamworks\\steamv157\\sdk\\public\\steam\\isteammatchmaking.h",
+            "c:\\ue_5.4\\engine\\source\\thirdparty\\steamworks\\steamv157\\sdk\\public\\steam\\steam_api_common.h",
+            "c:\\ue_5.4\\engine\\source\\thirdparty\\steamworks\\steamv157\\sdk\\public\\steam\\steamtypes.h",
+            "c:\\ue_5.4\\engine\\source\\thirdparty\\steamworks\\steamv157\\sdk\\public\\steam\\steamclientpublic.h",
+            "c:\\ue_5.4\\engine\\source\\thirdparty\\steamworks\\steamv157\\sdk\\public\\steam\\steamuniverse.h",
+            "c:\\ue_5.4\\engine\\source\\thirdparty\\steamworks\\steamv157\\sdk\\public\\steam\\steam_api_internal.h",
+            "c:\\ue_5.4\\engine\\source\\thirdparty\\steamworks\\steamv157\\sdk\\public\\steam\\matchmakingtypes.h",
+            "c:\\ue_5.4\\engine\\source\\thirdparty\\steamworks\\steamv157\\sdk\\public\\steam\\isteamfriends.h",
+            "c:\\ue_5.4\\engine\\source\\thirdparty\\steamworks\\steamv157\\sdk\\public\\steam\\isteamnetworking.h",
+            "c:\\ue_5.4\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemtypes.h",
+            "c:\\ue_5.4\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemnames.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

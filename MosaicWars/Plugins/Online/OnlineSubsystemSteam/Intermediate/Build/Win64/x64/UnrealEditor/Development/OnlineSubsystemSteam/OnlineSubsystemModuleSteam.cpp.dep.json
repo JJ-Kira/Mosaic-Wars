@@ -1,0 +1,24 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\source\\private\\onlinesubsystemmodulesteam.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\intermediate\\build\\win64\\x64\\mosaicwarseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\onlinesubsystemsteam\\definitions.onlinesubsystemsteam.h",
+            "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\source\\public\\onlinesubsystemsteammodule.h",
+            "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\source\\public\\onlinesubsystemsteam.h",
+            "c:\\ue_5.4\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinedelegatemacros.h",
+            "c:\\ue_5.4\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemimpl.h",
+            "c:\\ue_5.4\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystem.h",
+            "c:\\ue_5.4\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemmodule.h",
+            "c:\\ue_5.4\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemtypes.h",
+            "c:\\ue_5.4\\engine\\plugins\\online\\onlinesubsystem\\source\\public\\onlinesubsystemnames.h",
+            "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\source\\public\\onlinesubsystemsteampackage.h",
+            "c:\\ue_5.4\\engine\\plugins\\runtime\\steam\\steamshared\\source\\steamshared\\public\\steamsharedmodule.h",
+            "c:\\ue_5.4\\engine\\plugins\\runtime\\steam\\steamshared\\source\\steamshared\\public\\steamsharedpackage.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
