@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "MosaicPlatform.h"
 #include "Blueprint/UserWidget.h"
 #include "MosaicWars_HUD.generated.h"
 
@@ -13,8 +14,14 @@ public:
     virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
 
 private:
-    void PerformLineTrace() const;
+    void PerformLineTrace();
 
     UPROPERTY(EditAnywhere)
     float TraceDistance = 10000.0f; // Adjust the trace distance as needed
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Game")
+    int OwningPlayerIndex;
+    
+    IInteractable* CurrentlyActiveInteractable = nullptr;
+    FHitResult CurrentHitResult;
 };

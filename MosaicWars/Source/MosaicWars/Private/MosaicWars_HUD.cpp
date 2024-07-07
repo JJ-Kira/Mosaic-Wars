@@ -2,7 +2,7 @@
 #include "Engine/World.h"
 #include "GameFramework/PlayerController.h"
 #include "DrawDebugHelpers.h"
-#include "MosaicPlatform.h" // Include the header for your interface
+#include "MosaicPlatform.h"
 
 void UMosaicWars_HUD::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
 {
@@ -10,7 +10,7 @@ void UMosaicWars_HUD::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
     PerformLineTrace();
 }
 
-void UMosaicWars_HUD::PerformLineTrace() const
+void UMosaicWars_HUD::PerformLineTrace()
 {
     APlayerController* PlayerController = GetWorld()->GetFirstPlayerController();
     if (!PlayerController) return;
@@ -34,7 +34,7 @@ void UMosaicWars_HUD::PerformLineTrace() const
     FCollisionQueryParams Params;
     Params.AddIgnoredActor(GetWorld()->GetFirstPlayerController()->GetPawn()); // Ignore the player
 
-    if (bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility, Params))
+    if (GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility, Params))
     {
         DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1.0f, 0, 1.0f);
 
@@ -43,8 +43,26 @@ void UMosaicWars_HUD::PerformLineTrace() const
         {
             if (IInteractable* Interface = Cast<IInteractable>(HitActor))
             {
-                Interface->Highlight(HitResult);
+                Interface->Highlight(HitResult, OwningPlayerIndex);
+                CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
+                CurrentlyActiveInteractable = Interface;
+                CurrentHitResult = HitResult;
+            }
+            else if (CurrentlyActiveInteractable != nullptr)
+            {
+                //CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
+                CurrentlyActiveInteractable = nullptr;
             }
         }
+        else if (CurrentlyActiveInteractable != nullptr)
+        {
+            //CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
+            CurrentlyActiveInteractable = nullptr;
+        }
+    }
+    else if (CurrentlyActiveInteractable != nullptr)
+    {
+        //CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
+        CurrentlyActiveInteractable = nullptr;
     }
 }

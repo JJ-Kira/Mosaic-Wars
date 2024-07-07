@@ -17,7 +17,9 @@ class IInteractable
     GENERATED_BODY()
 
 public:
-    virtual void Highlight(FHitResult HitResult) = 0;
+    virtual void Highlight(FHitResult HitResult, int PlayerIndex) = 0;
+
+    virtual void EndHighlight(FHitResult HitResult, int PlayerIndex) = 0;
 };
 
 UCLASS()
@@ -29,8 +31,9 @@ public:
     // Sets default values for this actor's properties
     AMosaicPlatform();
 
-    // Interface function implementation
-    virtual void Highlight(FHitResult HitResult) override;
+    // Interface functions implementation
+    virtual void Highlight(FHitResult HitResult, int PlayerIndex) override;
+    virtual void EndHighlight(FHitResult HitResult, int PlayerIndex);
 
     // Owning player controller index
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
@@ -48,4 +51,16 @@ private:
     // Instanced static mesh component to hold the tiles
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Game")
     UInstancedStaticMeshComponent* Tiles;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Colors")
+    FColor BaseColor;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Colors")
+    FColor EdgeBaseColor;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Colors")
+    FColor EdgeHighlightColor;
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Colors")
+    TArray<FColor> GameColors;
 };

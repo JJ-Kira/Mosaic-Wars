@@ -38,10 +38,6 @@
 /FUNCTIONPADMIN:6
 "C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Intermediate\Build\Win64\x64\MosaicWarsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\Module.OnlineSubsystemSteam.cpp.obj"
-"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\OnlineAuthHandlerSteam.gen.cpp.obj"
-"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\OnlineSubsystemSteam.init.gen.cpp.obj"
-"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\SteamNetConnection.gen.cpp.obj"
-"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\SteamNetDriver.gen.cpp.obj"
 "C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\Default.rc2.res"
 "ThirdParty\Steamworks\Steamv157\sdk\redistributable_bin\win64\steam_api64.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
