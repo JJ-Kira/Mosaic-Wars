@@ -1,11 +1,11 @@
-"C:\Users\piotr\Documents\repos\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\UnrealEditor\Inc\OnlineSubsystemSteam\UHT\SteamNetDriver.gen.cpp"
-/FI"C:\Users\piotr\Documents\repos\Mosaic-Wars\MosaicWars\Intermediate\Build\Win64\x64\MosaicWarsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/FI"C:\Users\piotr\Documents\repos\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\Definitions.OnlineSubsystemSteam.h"
-/Yu"C:\Users\piotr\Documents\repos\Mosaic-Wars\MosaicWars\Intermediate\Build\Win64\x64\MosaicWarsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
-/Fp"C:\Users\piotr\Documents\repos\Mosaic-Wars\MosaicWars\Intermediate\Build\Win64\x64\MosaicWarsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
-/Fo"C:\Users\piotr\Documents\repos\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\SteamNetDriver.gen.cpp.obj"
-/sourceDependencies "C:\Users\piotr\Documents\repos\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\SteamNetDriver.gen.cpp.dep.json"
-@"C:\Users\piotr\Documents\repos\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\OnlineSubsystemSteam.Shared.rsp"
+"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\UnrealEditor\Inc\OnlineSubsystemSteam\UHT\SteamNetDriver.gen.cpp"
+/FI"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Intermediate\Build\Win64\x64\MosaicWarsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/FI"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\Definitions.OnlineSubsystemSteam.h"
+/Yu"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Intermediate\Build\Win64\x64\MosaicWarsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h"
+/Fp"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Intermediate\Build\Win64\x64\MosaicWarsEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.pch"
+/Fo"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\SteamNetDriver.gen.cpp.obj"
+/sourceDependencies "C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\SteamNetDriver.gen.cpp.dep.json"
+@"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Online\OnlineSubsystemSteam\Intermediate\Build\Win64\x64\UnrealEditor\Development\OnlineSubsystemSteam\OnlineSubsystemSteam.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi

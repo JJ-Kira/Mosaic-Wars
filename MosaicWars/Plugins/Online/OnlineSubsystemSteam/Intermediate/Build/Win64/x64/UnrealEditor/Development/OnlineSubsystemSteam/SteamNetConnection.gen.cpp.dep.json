@@ -1,15 +1,15 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\intermediate\\build\\win64\\unrealeditor\\inc\\onlinesubsystemsteam\\uht\\steamnetconnection.gen.cpp",
+        "Source": "c:\\users\\julia\\onedrive\\dokumenty\\github\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\intermediate\\build\\win64\\unrealeditor\\inc\\onlinesubsystemsteam\\uht\\steamnetconnection.gen.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\intermediate\\build\\win64\\x64\\mosaicwarseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "PCH": "c:\\users\\julia\\onedrive\\dokumenty\\github\\mosaic-wars\\mosaicwars\\intermediate\\build\\win64\\x64\\mosaicwarseditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
-            "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\onlinesubsystemsteam\\definitions.onlinesubsystemsteam.h",
-            "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\source\\classes\\steamnetconnection.h",
-            "c:\\ue_5.4\\engine\\plugins\\online\\onlinesubsystemutils\\source\\onlinesubsystemutils\\classes\\ipconnection.h",
-            "c:\\ue_5.4\\engine\\plugins\\online\\onlinesubsystemutils\\intermediate\\build\\win64\\unrealeditor\\inc\\onlinesubsystemutils\\uht\\ipconnection.generated.h",
-            "c:\\users\\piotr\\documents\\repos\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\intermediate\\build\\win64\\unrealeditor\\inc\\onlinesubsystemsteam\\uht\\steamnetconnection.generated.h"
+            "c:\\users\\julia\\onedrive\\dokumenty\\github\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\onlinesubsystemsteam\\definitions.onlinesubsystemsteam.h",
+            "c:\\users\\julia\\onedrive\\dokumenty\\github\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\source\\classes\\steamnetconnection.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\online\\onlinesubsystemutils\\source\\onlinesubsystemutils\\classes\\ipconnection.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\online\\onlinesubsystemutils\\intermediate\\build\\win64\\unrealeditor\\inc\\onlinesubsystemutils\\uht\\ipconnection.generated.h",
+            "c:\\users\\julia\\onedrive\\dokumenty\\github\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\intermediate\\build\\win64\\unrealeditor\\inc\\onlinesubsystemsteam\\uht\\steamnetconnection.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
