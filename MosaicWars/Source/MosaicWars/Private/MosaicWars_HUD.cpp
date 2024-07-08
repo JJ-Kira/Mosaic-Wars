@@ -43,26 +43,27 @@ void UMosaicWars_HUD::PerformLineTrace()
         {
             if (IInteractable* Interface = Cast<IInteractable>(HitActor))
             {
+                if (CurrentlyActiveInteractable)
+                    CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
                 Interface->Highlight(HitResult, OwningPlayerIndex);
-                CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
                 CurrentlyActiveInteractable = Interface;
                 CurrentHitResult = HitResult;
             }
-            else if (CurrentlyActiveInteractable != nullptr)
+            else if (CurrentlyActiveInteractable)
             {
-                //CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
+                CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
                 CurrentlyActiveInteractable = nullptr;
             }
         }
-        else if (CurrentlyActiveInteractable != nullptr)
+        else if (CurrentlyActiveInteractable)
         {
-            //CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
+            CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
             CurrentlyActiveInteractable = nullptr;
         }
     }
-    else if (CurrentlyActiveInteractable != nullptr)
+    else if (CurrentlyActiveInteractable)
     {
-        //CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
+        CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
         CurrentlyActiveInteractable = nullptr;
     }
 }

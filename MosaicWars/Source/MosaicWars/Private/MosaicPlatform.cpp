@@ -31,28 +31,26 @@ void AMosaicPlatform::BeginPlay()
 // Handle interaction implementation
 void AMosaicPlatform::Highlight(FHitResult HitResult, int PlayerIndex)
 {
-	UInstancedStaticMeshComponent* ISMComponent = Cast<UInstancedStaticMeshComponent>(HitResult.Component);
-	if (ISMComponent && OwningPlayer == PlayerIndex)
+	if (Tiles && OwningPlayer == PlayerIndex)
 	{
 		int32 InstanceIndex = HitResult.Item;
             
-		UE_LOG(LogTemp, Log, TEXT("Hit Instanced Static Mesh Component: %s at Index: %d"), *ISMComponent->GetName(), InstanceIndex);
+		//UE_LOG(LogTemp, Log, TEXT("Hit Instanced Static Mesh Component: %s at Index: %d"), *Tiles->GetName(), InstanceIndex);
 
-		ISMComponent->SetCustomDataValue(InstanceIndex, 3, EdgeHighlightColor.R);
-		ISMComponent->SetCustomDataValue(InstanceIndex, 4, EdgeHighlightColor.G);
-		ISMComponent->SetCustomDataValue(InstanceIndex, 5, EdgeHighlightColor.B);
+		Tiles->SetCustomDataValue(InstanceIndex, 3, EdgeHighlightColor.R);
+		Tiles->SetCustomDataValue(InstanceIndex, 4, EdgeHighlightColor.G);
+		Tiles->SetCustomDataValue(InstanceIndex, 5, EdgeHighlightColor.B, true);
 	}
 }
 
 void AMosaicPlatform::EndHighlight(FHitResult HitResult, int PlayerIndex)
 {
-	UInstancedStaticMeshComponent* ISMComponent = Cast<UInstancedStaticMeshComponent>(HitResult.Component);
-	if (ISMComponent && OwningPlayer == PlayerIndex)
+	if (Tiles && OwningPlayer == PlayerIndex)
 	{
 		int32 InstanceIndex = HitResult.Item;
-
-		ISMComponent->SetCustomDataValue(InstanceIndex, 3, EdgeBaseColor.R);
-		ISMComponent->SetCustomDataValue(InstanceIndex, 4, EdgeBaseColor.G);
-		ISMComponent->SetCustomDataValue(InstanceIndex, 5, EdgeBaseColor.B);
+		
+		Tiles->SetCustomDataValue(InstanceIndex, 3, EdgeBaseColor.R);
+		Tiles->SetCustomDataValue(InstanceIndex, 4, EdgeBaseColor.G);
+		Tiles->SetCustomDataValue(InstanceIndex, 5, EdgeBaseColor.B, true);
 	}
 }

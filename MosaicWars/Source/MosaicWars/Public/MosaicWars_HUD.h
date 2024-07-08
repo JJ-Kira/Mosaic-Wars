@@ -20,7 +20,7 @@ private:
     float TraceDistance = 10000.0f; // Adjust the trace distance as needed
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Game")
-    int OwningPlayerIndex;
+    int OwningPlayerIndex = -1;
     
     IInteractable* CurrentlyActiveInteractable = nullptr;
     FHitResult CurrentHitResult;
