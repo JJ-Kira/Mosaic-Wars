@@ -31,16 +31,16 @@ void AMosaicPlatform::BeginPlay()
 // Handle interaction implementation
 void AMosaicPlatform::Highlight(FHitResult HitResult, int PlayerIndex)
 {
-	if (Tiles && OwningPlayer == PlayerIndex)
+		if (Tiles && OwningPlayer == PlayerIndex)
 	{
-		int32 InstanceIndex = HitResult.Item;
-            
 		//UE_LOG(LogTemp, Log, TEXT("Hit Instanced Static Mesh Component: %s at Index: %d"), *Tiles->GetName(), InstanceIndex);
-
+		int32 InstanceIndex = HitResult.Item;
+			
 		Tiles->SetCustomDataValue(InstanceIndex, 3, EdgeHighlightColor.R);
 		Tiles->SetCustomDataValue(InstanceIndex, 4, EdgeHighlightColor.G);
 		Tiles->SetCustomDataValue(InstanceIndex, 5, EdgeHighlightColor.B, true);
 	}
+	else {UE_LOG(LogTemp, Log, TEXT("FALSE %d - %d"), PlayerIndex, OwningPlayer);}
 }
 
 void AMosaicPlatform::EndHighlight(FHitResult HitResult, int PlayerIndex)

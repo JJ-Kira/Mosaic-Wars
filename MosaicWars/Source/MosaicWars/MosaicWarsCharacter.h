@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "MosaicPlatform.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
 #include "MosaicWarsCharacter.generated.h"
@@ -28,10 +29,17 @@ class AMosaicWarsCharacter : public ACharacter
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FollowCamera;
 	
-	/** MappingContext */
+	/** MappingContexts */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputMappingContext* DefaultMappingContext;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputMappingContext* GameMappingContext;
+
+	/** Interact Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* InteractAction;
+	
 	/** Jump Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* JumpAction;
@@ -46,25 +54,37 @@ class AMosaicWarsCharacter : public ACharacter
 
 public:
 	AMosaicWarsCharacter();
-	
+
+	virtual void Tick(float DeltaTime) override;
 
 protected:
-
+	/** Called for looking input */
+	void Interact(const FInputActionValue& Value);
+	
 	/** Called for movement input */
 	void Move(const FInputActionValue& Value);
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
-			
-
-protected:
+	
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	
 	// To add mapping context
-	virtual void BeginPlay();
+	virtual void BeginPlay() override;
 
 public:
+	void PerformLineTrace();
+
+	UPROPERTY(EditAnywhere)
+	float TraceDistance = 10000.0f; // Adjust the trace distance as needed
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Game")
+	int OwningPlayerIndex;
+    
+	IInteractable* CurrentlyActiveInteractable;
+	FHitResult CurrentHitResult;
+	
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
