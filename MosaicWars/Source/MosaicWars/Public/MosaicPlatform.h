@@ -20,6 +20,8 @@ public:
     virtual void Highlight(FHitResult HitResult, int PlayerIndex) = 0;
 
     virtual void EndHighlight(FHitResult HitResult, int PlayerIndex) = 0;
+
+    virtual void Interact(FColor Color, int PlayerIndex, int InstanceIndex) = 0;
 };
 
 UCLASS()
@@ -33,7 +35,10 @@ public:
 
     // Interface functions implementation
     virtual void Highlight(FHitResult HitResult, int PlayerIndex) override;
-    virtual void EndHighlight(FHitResult HitResult, int PlayerIndex);
+    
+    virtual void EndHighlight(FHitResult HitResult, int PlayerIndex) override;
+
+    virtual void Interact(FColor Color, int PlayerIndex, int InstanceIndex) override;
 
     // Owning player controller index
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")

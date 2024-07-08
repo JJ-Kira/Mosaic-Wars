@@ -1,5 +1,3 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -59,7 +57,8 @@ public:
 
 protected:
 	/** Called for looking input */
-	void Interact(const FInputActionValue& Value);
+	UFUNCTION(BlueprintCallable)
+	void Interact(const bool Value);
 	
 	/** Called for movement input */
 	void Move(const FInputActionValue& Value);

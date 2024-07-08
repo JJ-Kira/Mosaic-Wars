@@ -40,7 +40,6 @@ void AMosaicPlatform::Highlight(FHitResult HitResult, int PlayerIndex)
 		Tiles->SetCustomDataValue(InstanceIndex, 4, EdgeHighlightColor.G);
 		Tiles->SetCustomDataValue(InstanceIndex, 5, EdgeHighlightColor.B, true);
 	}
-	else {UE_LOG(LogTemp, Log, TEXT("FALSE %d - %d"), PlayerIndex, OwningPlayer);}
 }
 
 void AMosaicPlatform::EndHighlight(FHitResult HitResult, int PlayerIndex)
@@ -52,5 +51,15 @@ void AMosaicPlatform::EndHighlight(FHitResult HitResult, int PlayerIndex)
 		Tiles->SetCustomDataValue(InstanceIndex, 3, EdgeBaseColor.R);
 		Tiles->SetCustomDataValue(InstanceIndex, 4, EdgeBaseColor.G);
 		Tiles->SetCustomDataValue(InstanceIndex, 5, EdgeBaseColor.B, true);
+	}
+}
+
+void AMosaicPlatform::Interact(FColor Color, int PlayerIndex, int InstanceIndex)
+{
+	if (Tiles && OwningPlayer == PlayerIndex)
+	{
+		Tiles->SetCustomDataValue(InstanceIndex, 0, Color.R);
+		Tiles->SetCustomDataValue(InstanceIndex, 1, Color.G);
+		Tiles->SetCustomDataValue(InstanceIndex, 2, Color.B, true);
 	}
 }

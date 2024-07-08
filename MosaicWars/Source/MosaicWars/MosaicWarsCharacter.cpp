@@ -87,6 +87,9 @@ void AMosaicWarsCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMosaicWarsCharacter::Look);
+
+		// Interaction
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, FName("Interact"));//&AMosaicWarsCharacter::Interact);
 	}
 	else
 	{
@@ -94,9 +97,12 @@ void AMosaicWarsCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	}
 }
 
-void AMosaicWarsCharacter::Interact(const FInputActionValue& Value)
+void AMosaicWarsCharacter::Interact(const bool Value)
 {
-	
+	if (CurrentlyActiveInteractable)
+	{
+		CurrentlyActiveInteractable->Interact(FColor::Blue, OwningPlayerIndex, CurrentHitResult.Item);
+	}
 }
 
 void AMosaicWarsCharacter::Tick(float DeltaTime)
@@ -141,10 +147,8 @@ void AMosaicWarsCharacter::PerformLineTrace()
         AActor* HitActor = HitResult.GetActor();
         if (HitActor && HitActor->GetClass()->ImplementsInterface(UInteractable::StaticClass()))
         {
-        	UE_LOG(LogTemp, Log, TEXT("000000000000000000000"));
             if (IInteractable* Interface = Cast<IInteractable>(HitActor))
             {
-            	UE_LOG(LogTemp, Log, TEXT("1111111111111111111111"));
                 if (CurrentlyActiveInteractable)
                     CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
                 Interface->Highlight(HitResult, OwningPlayerIndex);
