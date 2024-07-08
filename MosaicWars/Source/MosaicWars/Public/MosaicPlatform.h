@@ -1,28 +1,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Interactable.h"
 #include "GameFramework/Actor.h"
 #include "UObject/Interface.h"
 #include "MosaicPlatform.generated.h"
-
-// Interface declaration
-UINTERFACE(MinimalAPI)
-class UInteractable : public UInterface
-{
-    GENERATED_BODY()
-};
-
-class IInteractable
-{
-    GENERATED_BODY()
-
-public:
-    virtual void Highlight(FHitResult HitResult, int PlayerIndex) = 0;
-
-    virtual void EndHighlight(FHitResult HitResult, int PlayerIndex) = 0;
-
-    virtual void Interact(FColor Color, int PlayerIndex, int InstanceIndex) = 0;
-};
 
 UCLASS()
 class MOSAICWARS_API AMosaicPlatform : public AActor, public IInteractable
@@ -65,7 +47,4 @@ private:
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Colors")
     FColor EdgeHighlightColor;
-    
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Colors")
-    TArray<FColor> GameColors;
 };

@@ -1,11 +1,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Interactable.h"
+
 #include "GameFramework/Actor.h"
 #include "MosaicPaint.generated.h"
 
 UCLASS()
-class MOSAICWARS_API AMosaicPaint : public AActor
+class MOSAICWARS_API AMosaicPaint : public AActor, public IInteractable
 {
 	GENERATED_BODY()
 
@@ -20,7 +22,12 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Colors")
-	FColor PaintColor;
+	virtual void Highlight(FHitResult HitResult, int PlayerIndex) override;
+    
+	virtual void EndHighlight(FHitResult HitResult, int PlayerIndex) override;
 
+	virtual void Interact(FColor Color, int PlayerIndex, int InstanceIndex) override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Colors")
+	FColor CurrentPaintColor;
 };

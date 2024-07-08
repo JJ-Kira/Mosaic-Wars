@@ -1,7 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "MosaicPlatform.h"
+#include "Interactable.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
 #include "MosaicWarsCharacter.generated.h"

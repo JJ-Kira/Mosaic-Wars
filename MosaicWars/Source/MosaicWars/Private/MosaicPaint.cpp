@@ -20,3 +20,18 @@ void AMosaicPaint::Tick(float DeltaTime)
 
 }
 
+// Handle interaction implementation
+void AMosaicPaint::Highlight(FHitResult HitResult, int PlayerIndex)
+{
+	
+}
+
+void AMosaicPaint::EndHighlight(FHitResult HitResult, int PlayerIndex)
+{
+	
+}
+
+void AMosaicPaint::Interact(FColor Color, int PlayerIndex, int InstanceIndex)
+{
+	//TODO: Change mannequin color
+}
