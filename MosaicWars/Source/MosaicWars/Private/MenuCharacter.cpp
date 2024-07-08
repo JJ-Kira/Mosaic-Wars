@@ -1,4 +1,4 @@
-#include "MosaicWarsCharacter.h"
+#include "MenuCharacter.h"
 #include "Engine/LocalPlayer.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -9,12 +9,10 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 
-DEFINE_LOG_CATEGORY(LogTemplateCharacter);
-
 //////////////////////////////////////////////////////////////////////////
 // AMosaicWarsCharacter
 
-AMosaicWarsCharacter::AMosaicWarsCharacter()
+AMenuCharacter::AMenuCharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -50,12 +48,9 @@ AMosaicWarsCharacter::AMosaicWarsCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
-
-	OwningPlayerIndex = -1;
-	CurrentlyActiveInteractable = nullptr;
 }
 
-void AMosaicWarsCharacter::BeginPlay()
+void AMenuCharacter::BeginPlay()
 {
 	// Call the base class  
 	Super::BeginPlay();
@@ -64,7 +59,7 @@ void AMosaicWarsCharacter::BeginPlay()
 //////////////////////////////////////////////////////////////////////////
 // Input
 
-void AMosaicWarsCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+void AMenuCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	// Add Input Mapping Context
 	if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
@@ -83,94 +78,14 @@ void AMosaicWarsCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
 		// Moving
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AMosaicWarsCharacter::Move);
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AMenuCharacter::Move);
 
 		// Looking
-		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMosaicWarsCharacter::Look);
-
-		// Interaction
-		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Triggered, this, FName("Interact"));//&AMosaicWarsCharacter::Interact);
-	}
-	else
-	{
-		UE_LOG(LogTemplateCharacter, Error, TEXT("'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
+		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AMenuCharacter::Look);
 	}
 }
 
-void AMosaicWarsCharacter::Interact(const bool Value)
-{
-	if (CurrentlyActiveInteractable)
-	{
-		CurrentlyActiveInteractable->Interact(FColor::Blue, OwningPlayerIndex, CurrentHitResult.Item);
-	}
-}
-
-void AMosaicWarsCharacter::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-	PerformLineTrace();
-}
-
-void AMosaicWarsCharacter::PerformLineTrace()
-{
-    APlayerController* PlayerController = GetWorld()->GetFirstPlayerController();
-    if (!PlayerController) return;
-
-    // Get the viewport size
-    int32 ViewportSizeX, ViewportSizeY;
-    PlayerController->GetViewportSize(ViewportSizeX, ViewportSizeY);
-
-    // Get the screen center
-    FVector2D ScreenCenter(ViewportSizeX / 2.0f, ViewportSizeY / 2.0f);
-
-    // Convert the screen center to a world direction
-    FVector WorldLocation, WorldDirection;
-    PlayerController->DeprojectScreenPositionToWorld(ScreenCenter.X, ScreenCenter.Y, WorldLocation, WorldDirection);
-
-    // Define the start and end points for the line trace
-    FVector Start = WorldLocation;
-    FVector End = Start + (WorldDirection * 1000.0f); // Adjust the trace distance as needed
-
-    FHitResult HitResult;
-    FCollisionQueryParams Params;
-    Params.AddIgnoredActor(GetWorld()->GetFirstPlayerController()->GetPawn()); // Ignore the player
-
-    if (GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility, Params))
-    {
-        DrawDebugLine(GetWorld(), Start, End, FColor::Green, false, 1.0f, 0, 1.0f);
-
-        AActor* HitActor = HitResult.GetActor();
-        if (HitActor && HitActor->GetClass()->ImplementsInterface(UInteractable::StaticClass()))
-        {
-            if (IInteractable* Interface = Cast<IInteractable>(HitActor))
-            {
-                if (CurrentlyActiveInteractable)
-                    CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
-                Interface->Highlight(HitResult, OwningPlayerIndex);
-                CurrentlyActiveInteractable = Interface;
-                CurrentHitResult = HitResult;
-            }
-            else if (CurrentlyActiveInteractable)
-            {
-                CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
-                CurrentlyActiveInteractable = nullptr;
-            }
-        }
-        else if (CurrentlyActiveInteractable)
-        {
-            CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
-            CurrentlyActiveInteractable = nullptr;
-        }
-    }
-    else if (CurrentlyActiveInteractable)
-    {
-        CurrentlyActiveInteractable->EndHighlight(CurrentHitResult, OwningPlayerIndex);
-        CurrentlyActiveInteractable = nullptr;
-    }
-}
-
-void AMosaicWarsCharacter::Move(const FInputActionValue& Value)
+void AMenuCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
@@ -193,7 +108,7 @@ void AMosaicWarsCharacter::Move(const FInputActionValue& Value)
 	}
 }
 
-void AMosaicWarsCharacter::Look(const FInputActionValue& Value)
+void AMenuCharacter::Look(const FInputActionValue& Value)
 {
 	// input is a Vector2D
 	FVector2D LookAxisVector = Value.Get<FVector2D>();
