@@ -1,0 +1,13 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\julia\\onedrive\\dokumenty\\github\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\intermediate\\build\\win64\\unrealgame\\inc\\onlinesubsystemsteam\\uht\\onlinesubsystemsteam.init.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\julia\\onedrive\\dokumenty\\github\\mosaic-wars\\mosaicwars\\intermediate\\build\\win64\\x64\\mosaicwars\\development\\engine\\sharedpch.engine.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\julia\\onedrive\\dokumenty\\github\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\intermediate\\build\\win64\\x64\\unrealgame\\development\\onlinesubsystemsteam\\definitions.onlinesubsystemsteam.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

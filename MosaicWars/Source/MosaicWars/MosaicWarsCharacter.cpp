@@ -109,11 +109,7 @@ void AMosaicWarsCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	FString CurrentMapName = GetWorld()->GetMapName();
-	if (CurrentMapName.EndsWith("MosaicWorld"))
-	{
-		PerformLineTrace();
-	}
+	PerformLineTrace();
 }
 
 void AMosaicWarsCharacter::PerformLineTrace()

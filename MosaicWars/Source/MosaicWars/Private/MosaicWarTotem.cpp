@@ -17,10 +17,9 @@ void AMosaicWarTotem::BeginPlay()
 	
 }
 
+#if WITH_EDITOR
 void AMosaicWarTotem::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
-	Super::PostEditChangeProperty(PropertyChangedEvent);
-
 	Super::PostEditChangeProperty(PropertyChangedEvent);
 
 	FName PropertyName = (PropertyChangedEvent.Property != nullptr) ? PropertyChangedEvent.Property->GetFName() : NAME_None;
@@ -32,6 +31,7 @@ void AMosaicWarTotem::PostEditChangeProperty(FPropertyChangedEvent& PropertyChan
 		NumberOfColorsPerRound.SetNum(NumberOfRounds);
 	}
 }
+#endif
 
 // Called every frame
 void AMosaicWarTotem::Tick(float DeltaTime)

@@ -14,7 +14,7 @@ struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
-UCLASS(config=Game)
+UCLASS()
 class AMosaicWarsCharacter : public ACharacter
 {
 	GENERATED_BODY()
