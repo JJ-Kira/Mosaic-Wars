@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\julia\\onedrive\\dokumenty\\github\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\intermediate\\build\\win64\\unrealgame\\inc\\onlinesubsystemsteam\\uht\\steamnetdriver.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\julia\\onedrive\\dokumenty\\github\\mosaic-wars\\mosaicwars\\intermediate\\build\\win64\\x64\\mosaicwars\\development\\engine\\sharedpch.engine.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\julia\\onedrive\\dokumenty\\github\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\intermediate\\build\\win64\\x64\\unrealgame\\development\\onlinesubsystemsteam\\definitions.onlinesubsystemsteam.h",
+            "c:\\users\\julia\\onedrive\\dokumenty\\github\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\source\\classes\\steamnetdriver.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\online\\onlinesubsystemutils\\source\\onlinesubsystemutils\\classes\\ipnetdriver.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\containers\\circularqueue.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\sockets\\public\\socketsubsystem.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\sockets\\public\\addressinfotypes.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\core\\public\\containers\\spscqueue.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\plugins\\online\\onlinesubsystemutils\\intermediate\\build\\win64\\unrealgame\\inc\\onlinesubsystemutils\\uht\\ipnetdriver.generated.h",
+            "c:\\users\\julia\\onedrive\\dokumenty\\github\\mosaic-wars\\mosaicwars\\plugins\\online\\onlinesubsystemsteam\\intermediate\\build\\win64\\unrealgame\\inc\\onlinesubsystemsteam\\uht\\steamnetdriver.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

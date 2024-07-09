@@ -6,9 +6,8 @@
 /NAME:"UnrealEditor-RiderLink.dll"
 /IGNORE:4221
 /NODEFAULTLIB
+"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\Module.RiderLink.cpp.obj"
 "C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\ProtocolFactory.cpp.obj"
-"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\RiderLink.cpp.obj"
-"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\UE4TypesMarshallers.cpp.obj"
 "C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\instantiations_UE4Library.cpp.obj"
 "C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\BlueprintFunction.Pregenerated.cpp.obj"
 "C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\BlueprintHighlighter.Pregenerated.cpp.obj"

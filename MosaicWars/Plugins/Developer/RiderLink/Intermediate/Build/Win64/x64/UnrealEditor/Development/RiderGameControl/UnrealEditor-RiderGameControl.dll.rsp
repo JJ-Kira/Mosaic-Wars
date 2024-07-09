@@ -35,7 +35,7 @@
 /NODEFAULTLIB:"LIBCD"
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
-"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderGameControl\RiderGameControl.cpp.obj"
+"C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderGameControl\Module.RiderGameControl.cpp.obj"
 "C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderGameControl\Default.rc2.res"
 "C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RD\UnrealEditor-RD.lib"
 "C:\Users\julia\OneDrive\Dokumenty\GitHub\Mosaic-Wars\MosaicWars\Plugins\Developer\RiderLink\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiderLink\UnrealEditor-RiderLink.lib"
