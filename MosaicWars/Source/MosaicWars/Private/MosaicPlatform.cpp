@@ -38,7 +38,7 @@ void AMosaicPlatform::Highlight(FHitResult HitResult, int PlayerIndex)
 			
 		Tiles->SetCustomDataValue(InstanceIndex, 3, EdgeHighlightColor.R);
 		Tiles->SetCustomDataValue(InstanceIndex, 4, EdgeHighlightColor.G);
-		Tiles->SetCustomDataValue(InstanceIndex, 5, EdgeHighlightColor.B, true);
+		Tiles->SetCustomDataValue(InstanceIndex, 5, EdgeHighlightColor.B, true);;
 	}
 }
 
@@ -58,8 +58,25 @@ void AMosaicPlatform::Interact(FColor Color, int PlayerIndex, int InstanceIndex)
 {
 	if (Tiles && OwningPlayer == PlayerIndex)
 	{
+		Mosaic[InstanceIndex] = Color;
 		Tiles->SetCustomDataValue(InstanceIndex, 0, Color.R);
 		Tiles->SetCustomDataValue(InstanceIndex, 1, Color.G);
 		Tiles->SetCustomDataValue(InstanceIndex, 2, Color.B, true);
 	}
 }
+
+#if WITH_EDITOR
+void AMosaicPlatform::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
+{
+	Super::PostEditChangeProperty(PropertyChangedEvent);
+
+	FName PropertyName = (PropertyChangedEvent.Property != nullptr) ? PropertyChangedEvent.Property->GetFName() : NAME_None;
+
+	// Check if the property being changed is the NumberOfRounds
+	if (PropertyName == GET_MEMBER_NAME_CHECKED(AMosaicPlatform, PlatformSize))
+	{
+		// Adjust the size of NumberOfColorsPerRound to match NumberOfRounds
+		Mosaic.SetNum(PlatformSize * PlatformSize);
+	}
+}
+#endif

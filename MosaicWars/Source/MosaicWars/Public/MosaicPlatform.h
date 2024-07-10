@@ -26,6 +26,8 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Game")
     int OwningPlayer;
 
+    void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent);
+
 protected:
     // Called when the game starts or when spawned
     virtual void BeginPlay() override;
@@ -47,4 +49,7 @@ private:
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Colors")
     FColor EdgeHighlightColor;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Game")
+    TArray<FColor> Mosaic;
 };
