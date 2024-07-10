@@ -4,7 +4,7 @@
 #include "MosaicWarTotem.h"
 
 // Sets default values
-AMosaicWarTotem::AMosaicWarTotem(): UsePaintTime(1.5), GetPaintTime(3), SingleRoundTime(60), NumberOfRounds(3)
+AMosaicWarTotem::AMosaicWarTotem(): UsePaintTime(1.5), GetPaintTime(3), NumberOfRounds(3)
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -29,6 +29,7 @@ void AMosaicWarTotem::PostEditChangeProperty(FPropertyChangedEvent& PropertyChan
 	{
 		// Adjust the size of NumberOfColorsPerRound to match NumberOfRounds
 		NumberOfColorsPerRound.SetNum(NumberOfRounds);
+		TimesPerRound.SetNum(NumberOfRounds);
 	}
 }
 #endif

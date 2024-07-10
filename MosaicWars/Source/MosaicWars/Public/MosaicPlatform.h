@@ -33,7 +33,7 @@ protected:
 private:
     // Size of the platform
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Game")
-    int32 PlatformSize;
+    int PlatformSize;
 
     // Instanced static mesh component to hold the tiles
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Game")

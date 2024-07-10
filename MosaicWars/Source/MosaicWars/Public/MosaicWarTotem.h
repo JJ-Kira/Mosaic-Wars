@@ -1,11 +1,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "MosaicPlatform.h"
 #include "MosaicWarTotem.generated.h"
 
 UCLASS()
-class MOSAICWARS_API AMosaicWarTotem : public AActor
+class MOSAICWARS_API AMosaicWarTotem : public AMosaicPlatform
 {
 	GENERATED_BODY()
 	
@@ -39,9 +39,9 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Time")
 	float GetPaintTime;
 
-	//Time of a single round (in seconds)
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Time")
-	float SingleRoundTime;
+	//Time of times (in seconds) of each round
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Time")
+    TArray<int> TimesPerRound;
 
 	//Number of rounds in a single game
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Time")
