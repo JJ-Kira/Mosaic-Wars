@@ -53,6 +53,7 @@ AMosaicWarsCharacter::AMosaicWarsCharacter()
 
 	OwningPlayerIndex = -1;
 	CurrentlyActiveInteractable = nullptr;
+	CurrentColor = FColor::Black;
 }
 
 void AMosaicWarsCharacter::BeginPlay()
@@ -101,7 +102,7 @@ void AMosaicWarsCharacter::Interact(const bool Value)
 {
 	if (CurrentlyActiveInteractable)
 	{
-		CurrentlyActiveInteractable->Interact(FColor::Blue, OwningPlayerIndex, CurrentHitResult.Item);
+		CurrentlyActiveInteractable->Interact(CurrentColor, OwningPlayerIndex, CurrentHitResult.Item);
 	}
 }
 
@@ -204,4 +205,10 @@ void AMosaicWarsCharacter::Look(const FInputActionValue& Value)
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
 	}
+}
+
+void AMosaicWarsCharacter::ChangeColor(FColor Color)
+{
+	CurrentColor = Color;
+	//TODO: modify material
 }

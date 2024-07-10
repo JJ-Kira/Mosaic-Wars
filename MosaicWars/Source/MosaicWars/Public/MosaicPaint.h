@@ -28,6 +28,16 @@ public:
 
 	virtual void Interact(FColor Color, int PlayerIndex, int InstanceIndex) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Colors")
-	FColor CurrentPaintColor;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Meta = (AllowPrivateAccess = true), Category = "Paint")
+	FColor PaintColor;
+
+	UFUNCTION(BlueprintCallable)
+	void SetColor(FColor Color);
+
+private:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UStaticMeshComponent* MeshComponent;
+
+	UPROPERTY()
+	UMaterialInstanceDynamic* DynamicMaterialInstance;
 };

@@ -88,5 +88,11 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+	UPROPERTY()
+	FColor CurrentColor;
+	
+	UFUNCTION(BlueprintCallable)
+	void ChangeColor(FColor Color);
 };
 
